@@ -37,8 +37,10 @@
     "examples:test": "cross-env CI=true babel-node examples/testAll.js"
   },
   "dependencies": {
+    "lodash": "^4.17.11",
     "loose-envify": "^1.4.0",
-    "symbol-observable": "^1.2.0"
+    "symbol-observable": "^1.2.0",
+    "validator": "^10.11.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
