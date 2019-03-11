@@ -1,11 +1,11 @@
 {
-  "name": "rollup-babel-template",
-  "version": "4.0.1",
-  "description": "rollup babel template",
+  "name": "modelman",
+  "version": "0.0.1",
+  "description": "This is a general-purpose check library.",
   "license": "MIT",
-  "homepage": "https://github.com/lisniuse/rollup-babel-template",
-  "repository": "https://github.com/lisniuse/rollup-babel-template",
-  "bugs": "https://github.com/lisniuse/rollup-babel-template/issues",
+  "homepage": "https://github.com/lisniuse/is-pro",
+  "repository": "https://github.com/lisniuse/is-pro",
+  "bugs": "https://github.com/lisniuse/is-pro/issues",
   "keywords": [
     "template",
     "scaffold"
@@ -13,9 +13,9 @@
   "authors": [
     "Zhibin Chen <17560235@qq.com> (https://github.com/lisniuse)"
   ],
-  "main": "dist/lib/project.js",
-  "unpkg": "dist/umd/project.js",
-  "module": "dist/es/project.js",
+  "main": "dist/cjs/modelman.js",
+  "unpkg": "dist/umd/modelman.js",
+  "module": "dist/es/modelman.js",
   "typings": "./index.d.ts",
   "files": [
     "dist",
@@ -37,10 +37,8 @@
     "examples:test": "cross-env CI=true babel-node examples/testAll.js"
   },
   "dependencies": {
-    "lodash": "^4.17.11",
     "loose-envify": "^1.4.0",
-    "symbol-observable": "^1.2.0",
-    "validator": "^10.11.0"
+    "symbol-observable": "^1.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -74,7 +72,7 @@
     "typescript": "^3.2.4",
     "typings-tester": "^0.3.2"
   },
-  "npmName": "project",
+  "npmName": "ispro",
   "npmFileMap": [
     {
       "basePath": "/dist/",

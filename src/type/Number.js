@@ -8,4 +8,4 @@ class Number {
     }
 }
 
-export default Number
+export default Number;
