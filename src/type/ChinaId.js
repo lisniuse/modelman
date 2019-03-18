@@ -2,23 +2,23 @@ import is from 'ispro';
 import Base from './Base';
 
 /**
- * type Number
+ * type ChinaId
  */
 
-class Number extends Base {
+class ChinaId extends Base {
 
   constructor(value) {
     super(value);
   }
 
   check() {
-    return is.number(this.value);
+    return is.cnIdCode(this.value);
   }
   
   _default() {
-    return 0;
+    return '';
   }
 
 }
 
-export default Number;
+export default ChinaId;

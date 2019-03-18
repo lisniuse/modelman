@@ -2,23 +2,23 @@ import is from 'ispro';
 import Base from './Base';
 
 /**
- * type Number
+ * type Email
  */
 
-class Number extends Base {
+class Email extends Base {
 
   constructor(value) {
     super(value);
   }
 
   check() {
-    return is.number(this.value);
+    return is.email(this.value);
   }
   
   _default() {
-    return 0;
+    return '';
   }
 
 }
 
-export default Number;
+export default Email;
