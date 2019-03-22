@@ -62,7 +62,7 @@ Username | [ispro.username 类型](https://github.com/lisniuse/is-pro#isusername
 myModel.assign(fields: object): void | 为这个模型定义字段以及字段的类型。
 myModel.setData(object: object): myModel  | 为某个字段设置值，可以传入一个对象设置多个值。
 myModel.to.json(): JSON | 转化为键值对的json对象。
-myModel.to.mongoose(): JSON | 表示是否是前端的列表或者表格需要展示的字段类型。
+myModel.to.mongoose(): JSON | 转化为mongoose的model的数据格式。
 myModel.validator.all(): JSON  | 校验全部的数据，并返回校验失败的字段名和字段显示名。
 myModel.validator.part(): JSON  | 只校验有效值的数据，并返回校验失败的字段名和字段显示名。
 
@@ -87,8 +87,8 @@ m.assign({
   keywords: { n: '文章关键字', type: 'Array', r: true }, //文章关键字
   description: { n: '文章摘要', type: 'String', min: 10, max: 200, r: true }, //文章摘要
   poster: { n: '文章封面', type: 'Url', r: true }, //poster
-  mdContent: { n: '文章markdown内容', type: 'Url', r: true }, //文章markdown内容
-  htContent: { n: '文章markdown内容', type: 'Url', r: true, f: false }, //文章html内容
+  mdContent: { n: '文章markdown内容', type: 'Stirng', r: true }, //文章markdown内容
+  htContent: { n: '文章markdown内容', type: 'String', r: true, f: false }, //文章html内容
   topType: { n: '置顶方式', type: 'Number', d: 0, r: true }, //置顶方式 0、无置顶 1、主要置顶 2、次要置顶
   likeCount: { n: '点赞数量', type: 'Number', d: 0, f: false }, //点赞数量
   commentCount: { n: '评论数量', type: 'Number', d: 0, f: false }, //评论数量
@@ -113,6 +113,12 @@ console.log(mongooseModel);
 console.log('\n=> 校验数据，并返回校验失败的字段名和字段显示名: \n')
 console.log(m.validator.all());
 ```
+
+## 前端例子
+
+结合vue使用modelman的模型自动渲染表单组件。
+
+github地址：[https://github.com/lisniuse/vue-modelman-example](https://github.com/lisniuse/vue-modelman-example)
 
 ## assign方法参数说明
 

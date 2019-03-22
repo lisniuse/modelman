@@ -16,8 +16,8 @@ m.assign({
   keywords: { n: '文章关键字', type: 'Array', r: true }, //文章关键字
   description: { n: '文章摘要', type: 'String', min: 10, max: 200, r: true }, //文章摘要
   poster: { n: '文章封面', type: 'Url', r: true }, //poster
-  mdContent: { n: '文章markdown内容', type: 'Url', r: true }, //文章markdown内容
-  htContent: { n: '文章markdown内容', type: 'Url', r: true, f: false }, //文章html内容
+  mdContent: { n: '文章markdown内容', type: 'String', r: true }, //文章markdown内容
+  htContent: { n: '文章markdown内容', type: 'String', r: true, f: false }, //文章html内容
   topType: { n: '置顶方式', type: 'Number', d: 0, r: true }, //置顶方式 0、无置顶 1、主要置顶 2、次要置顶
   likeCount: { n: '点赞数量', type: 'Number', d: 0, f: false }, //点赞数量
   commentCount: { n: '评论数量', type: 'Number', d: 0, f: false }, //评论数量
