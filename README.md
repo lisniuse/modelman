@@ -37,22 +37,23 @@ Modelman兼容大部分的 [mongoose 的数据类型](https://mongoosejs.com/doc
 
 类型名称 | 描述
 ---|---
-String | 普通字符串
-Number | 普通数字
-Date | 日期对象
 Array | 普通数组对象
-Object | 普通对象
-Map | Map对象
-Buffer | Buffer对象
 Boolean | 布尔值
-Float | 浮点数
-Timestamp | 时间戳类型
-Mixed | 混合类型，可以放任意类型数据
-ObjectId | ObjectId, mongodb的唯一id类型
+Buffer | Buffer对象
+ChinaId | 中国身份证号类型
+Date | 日期对象
 Email | 邮箱类型
+Float | 浮点数
+Map | Map对象
+Mixed | 混合类型，可以放任意类型数据
+Number | 普通数字
+Object | 普通对象
+ObjectId | ObjectId, mongodb的唯一id类型
+Password | [ispro.password 类型](https://github.com/lisniuse/is-pro#ispasswordvalue-any)
+String | 普通字符串
+Timestamp | 时间戳类型
 Url | 网址类型
 Username | [ispro.username 类型](https://github.com/lisniuse/is-pro#isusernamevalue-any)
-Password | [ispro.password 类型](https://github.com/lisniuse/is-pro#ispasswordvalue-any)
 
 ## API
 

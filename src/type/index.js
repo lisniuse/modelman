@@ -1,25 +1,39 @@
-import Base from './Base';
-import Number from './Number';
-import String from './String';
 import Array from './Array';
+import Base from './Base';
+import Boolean from './Boolean';
+import Buffer from './Buffer';
+import ChinaId from './ChinaId';
+import Date from './Date';
+import Email from './Email';
+import Float from './Float';
+import Map from './Map';
+import Mixed from './Mixed';
+import Number from './Number';
 import Object from './Object';
 import ObjectId from './ChinaId';
-import Mixed from './Mixed';
+import Password from './Password';
+import String from './String';
 import Timestamp from './Timestamp';
 import Url from './Url';
-import Email from './Email';
-import ChinaId from './ChinaId';
+import Username from './Username';
 
 export default {
-  Base,
-  Number,
-  String,
   Array,
+  Base,
+  Boolean,
+  Buffer,
+  ChinaId,
+  Date,
+  Email,
+  Float,
+  Map,
+  Mixed,
+  Number,
   Object,
   ObjectId,
-  Mixed,
+  Password,
+  String,
   Timestamp,
   Url,
-  Email,
-  ChinaId
+  Username
 }
