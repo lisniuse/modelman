@@ -3,10 +3,10 @@ import Base from './Base';
 import getGlobal from '../util/getGlobal';
 
 /**
- * type String
+ * type Url
  */
 
-class String extends Base {
+class Url extends Base {
 
   constructor(value) {
     super(value);
@@ -14,13 +14,13 @@ class String extends Base {
 
   check() {
     if ( this.required === true ) {
-      if ( this.value === '' ) {
+      if ( is.not.valid(this.value) ) {
         return false;
       } else {
-        return is.string(this.value);
+        return is.url(this.value);
       }
     } else {
-      return is.string(this.value);
+      return is.url(this.value);
     }
   }
   
@@ -30,8 +30,8 @@ class String extends Base {
 
 }
 
-String.toMongoType = function(Schema) {
+Url.toMongoType = function(Schema) {
   return getGlobal().String;
 }
 
-export default String;
+export default Url;

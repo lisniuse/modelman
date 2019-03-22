@@ -3,27 +3,27 @@ import Base from './Base';
 import getGlobal from '../util/getGlobal';
 
 /**
- * type ChinaId
+ * type Object
  */
 
-class ChinaId extends Base {
+class Object extends Base {
 
   constructor(value) {
     super(value);
   }
 
   check() {
-    return is.cnIdCode(this.value);
+    return is.plainObject(this.value);
   }
   
   _default() {
-    return '';
+    return {};
   }
 
 }
 
-ChinaId.toMongoType = function(Schema) {
-  return getGlobal().String;
+Object.toMongoType = function(Schema) {
+  return getGlobal().Object;
 }
 
-export default ChinaId;
+export default Object;

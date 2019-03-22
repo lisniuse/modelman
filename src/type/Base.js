@@ -1,4 +1,5 @@
 import is from 'ispro';
+import getGlobal from '../util/getGlobal';
 
 /**
  * Basic type
@@ -14,17 +15,16 @@ class Base {
     formField: true,
     required: true,
     min: -1,
-    max: -1
+    max: -1,
+    ref: '' //mongoose's type
   }) {
-    this.value = options.defaultValue || this._default();
-    this.name = options.name;
-    this.displayName = options.displayName;
-    this.tableField = options.tableField;
-    this.formField = options.formField;
-    this.required = options.required;
-    this.min = options.min;
-    this.max = options.max;
-
+    for (const key in options) {
+      if (options.hasOwnProperty(key)) {
+        const element = options[key];
+        this[key] = element;
+      }
+    }
+    this.value = is.valid(options.defaultValue) ? options.defaultValue : this._default();
     Base.fieldCount++;
   }
 
@@ -49,6 +49,12 @@ class Base {
   }
 }
 
+//Total number of record fields
 Base.fieldCount = 0;
+
+//Convert to mongo data type
+Base.toMongoType = function(Schema) {
+  return getGlobal().String;
+}
 
 export default Base;
