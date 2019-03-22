@@ -69,7 +69,7 @@ myModel.validator.part(): JSON  | 只校验有效值的数据，并返回校验�
 ## 一个例子
 
 ```javascript
-const modelman = require('../dist/umd/modelman');
+const modelman = require('modelman');
 
 //创建一个新的modelman的模型
 let m = new modelman.Model({
