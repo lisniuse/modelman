@@ -1,10 +1,12 @@
 const modelman = require('../dist/umd/modelman');
 
+//Create a new model
 let m = new modelman.Model({
-  name: 'users',
-  displayName: '用户'
+  name: 'article',
+  displayName: '文章'
 });
 
+//Define the fields of the model.
 m.assign({
   serialNumber: { n: '文章序号', type: 'Number' }, //文章序号
   categoryId: { n: '所属分类对象', type: 'ObjectId', ref: 'Category' }, //所属分类对象
@@ -24,11 +26,15 @@ m.assign({
   updateTime: { n: '更新时间', type: 'Timestamp', t: true, f: false } //更新时间
 });
 
+//Set a value.
+m.setData({ title: '这是一篇文章！' });
+// to json.
 let json = m.to.json();
-let res = m.setData({ email: '17560235@qq.com' });
+// to Mongoose's Model
 let mongooseModel = m.to.mongoose();
-// console.log(json);
-
-// console.log(res);
-
+console.log('\n=> json : \n')
+console.log(JSON.stringify(json, null, 2));
+console.log('\n=> Mongoose\'s Model : \n')
 console.log(mongooseModel);
+console.log('\n=> Will return a list of validation errors: \n')
+console.log(m.validator.all());

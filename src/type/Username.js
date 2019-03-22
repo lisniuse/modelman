@@ -3,27 +3,27 @@ import Base from './Base';
 import getGlobal from '../util/getGlobal';
 
 /**
- * type Array
+ * type Username
  */
 
-class Array extends Base {
+class Username extends Base {
 
   constructor(value) {
     super(value);
   }
 
   check() {
-    return is.array(this.value);
+    return is.username(this.value);
   }
   
   _default() {
-    return getGlobal().Array();
+    return '';
   }
 
 }
 
-Array.toMongoType = function(Schema) {
-  return getGlobal().Array;
+Username.toMongoType = function(Schema) {
+  return getGlobal().String;
 }
 
-export default Array;
+export default Username;

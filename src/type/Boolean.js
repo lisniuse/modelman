@@ -3,27 +3,27 @@ import Base from './Base';
 import getGlobal from '../util/getGlobal';
 
 /**
- * type Array
+ * type Boolean
  */
 
-class Array extends Base {
+class Boolean extends Base {
 
   constructor(value) {
     super(value);
   }
 
   check() {
-    return is.array(this.value);
+    return is.boolean(this.value);
   }
   
   _default() {
-    return getGlobal().Array();
+    return false;
   }
 
 }
 
-Array.toMongoType = function(Schema) {
-  return getGlobal().Array;
+Boolean.toMongoType = function(Schema) {
+  return getGlobal().Boolean;
 }
 
-export default Array;
+export default Boolean;

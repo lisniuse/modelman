@@ -1,12 +1,16 @@
+import is from 'ispro';
+
 function validatorPart() {
   let errorArr = [];
   this._iterator(field => {
-    if (!field.check()) {
-      let error = {
-        name: field.name,
-        displayName: field.displayName
+    if ( is.valid(field.value) ) {
+      if (!field.check()) {
+        let error = {
+          name: field.name,
+          displayName: field.displayName
+        }
+        errorArr.push(error);
       }
-      errorArr.push(error);
     }
   });
   return errorArr;

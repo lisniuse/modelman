@@ -3,27 +3,27 @@ import Base from './Base';
 import getGlobal from '../util/getGlobal';
 
 /**
- * type Array
+ * type Map
  */
 
-class Array extends Base {
+class Map extends Base {
 
   constructor(value) {
     super(value);
   }
 
   check() {
-    return is.array(this.value);
+    return is.map(this.value);
   }
   
   _default() {
-    return getGlobal().Array();
+    return new getGlobal().Map();
   }
 
 }
 
-Array.toMongoType = function(Schema) {
-  return getGlobal().Array;
+Map.toMongoType = function(Schema) {
+  return getGlobal().Map;
 }
 
-export default Array;
+export default Map;

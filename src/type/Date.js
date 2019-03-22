@@ -3,27 +3,27 @@ import Base from './Base';
 import getGlobal from '../util/getGlobal';
 
 /**
- * type Array
+ * type Date
  */
 
-class Array extends Base {
+class Date extends Base {
 
   constructor(value) {
     super(value);
   }
 
   check() {
-    return is.array(this.value);
+    return is.date(this.value);
   }
   
   _default() {
-    return getGlobal().Array();
+    return new getGlobal().Date();
   }
 
 }
 
-Array.toMongoType = function(Schema) {
-  return getGlobal().Array;
+Date.toMongoType = function(Schema) {
+  return getGlobal().Date;
 }
 
-export default Array;
+export default Date;
