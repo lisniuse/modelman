@@ -22,7 +22,7 @@ class Date extends Base {
 
 }
 
-Date.toMongoType = function(Schema) {
+Date.toMongoType = function(Schema = {}) {
   return getGlobal().Date;
 }
 

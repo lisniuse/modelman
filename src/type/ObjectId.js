@@ -1,4 +1,5 @@
 import Base from './Base';
+import is from 'ispro';
 
 /**
  * type ObjectId
@@ -20,7 +21,7 @@ class ObjectId extends Base {
 
 }
 
-ObjectId.toMongoType = function(Schema) {
+ObjectId.toMongoType = function(Schema = {}) {
   return Schema.ObjectId;
 }
 

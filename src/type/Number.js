@@ -22,7 +22,7 @@ class Number extends Base {
 
 }
 
-Number.toMongoType = function(Schema) {
+Number.toMongoType = function(Schema = {}) {
   return getGlobal().Number;
 }
 

@@ -20,7 +20,7 @@ class Mixed extends Base {
 
 }
 
-Mixed.toMongoType = function(Schema) {
+Mixed.toMongoType = function(Schema = {}) {
   return Schema.Mixed;
 }
 

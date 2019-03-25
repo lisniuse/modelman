@@ -22,7 +22,7 @@ class Password extends Base {
 
 }
 
-Password.toMongoType = function(Schema) {
+Password.toMongoType = function(Schema = {}) {
   return getGlobal().String;
 }
 

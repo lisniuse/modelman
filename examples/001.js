@@ -1,4 +1,5 @@
 const modelman = require('../dist/umd/modelman');
+const mongoose = require('mongoose');
 
 //Create a new model
 let m = new modelman.Model({
@@ -31,7 +32,7 @@ m.setData({ title: '这是一篇文章！' });
 // to json.
 let json = m.to.json();
 // to Mongoose's Model
-let mongooseModel = m.to.mongoose();
+let mongooseModel = m.to.mongoose(mongoose.Schema);
 console.log('\n=> json : \n')
 console.log(JSON.stringify(json, null, 2));
 console.log('\n=> Mongoose\'s Model : \n')

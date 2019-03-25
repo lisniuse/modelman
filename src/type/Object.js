@@ -22,7 +22,7 @@ class Object extends Base {
 
 }
 
-Object.toMongoType = function(Schema) {
+Object.toMongoType = function(Schema = {}) {
   return getGlobal().Object;
 }
 

@@ -30,7 +30,7 @@ class Timestamp extends Base {
 
 }
 
-Timestamp.toMongoType = function(Schema) {
+Timestamp.toMongoType = function(Schema = {}) {
   return getGlobal().Number;
 }
 

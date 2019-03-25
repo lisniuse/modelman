@@ -22,7 +22,7 @@ class Email extends Base {
 
 }
 
-Email.toMongoType = function(Schema) {
+Email.toMongoType = function(Schema = {}) {
   return getGlobal().String;
 }
 

@@ -22,7 +22,7 @@ class Buffer extends Base {
 
 }
 
-Buffer.toMongoType = function(Schema) {
+Buffer.toMongoType = function(Schema = {}) {
   return getGlobal().Buffer;
 }
 

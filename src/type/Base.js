@@ -53,7 +53,7 @@ class Base {
 Base.fieldCount = 0;
 
 //Convert to mongo data type
-Base.toMongoType = function(Schema) {
+Base.toMongoType = function(Schema = {}) {
   return getGlobal().String;
 }
 

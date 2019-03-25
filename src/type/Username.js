@@ -22,7 +22,7 @@ class Username extends Base {
 
 }
 
-Username.toMongoType = function(Schema) {
+Username.toMongoType = function(Schema = {}) {
   return getGlobal().String;
 }
 

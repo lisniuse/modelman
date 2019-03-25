@@ -30,7 +30,7 @@ class Url extends Base {
 
 }
 
-Url.toMongoType = function(Schema) {
+Url.toMongoType = function(Schema = {}) {
   return getGlobal().String;
 }
 

@@ -30,7 +30,7 @@ class String extends Base {
 
 }
 
-String.toMongoType = function(Schema) {
+String.toMongoType = function(Schema = {}) {
   return getGlobal().String;
 }
 

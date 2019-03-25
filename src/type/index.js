@@ -10,7 +10,7 @@ import Map from './Map';
 import Mixed from './Mixed';
 import Number from './Number';
 import Object from './Object';
-import ObjectId from './ChinaId';
+import ObjectId from './ObjectId';
 import Password from './Password';
 import String from './String';
 import Timestamp from './Timestamp';
