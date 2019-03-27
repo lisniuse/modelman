@@ -11,8 +11,9 @@ function pickle(key, field) {
   let ref = mergeValid(field, ['ref']);
   let Type = this._getConstructor(field.type);
   let name = key;
-
+  let extra = field.extra || {};
   let instance = new Type({
+    extra,
     defaultValue,
     name,
     displayName,
