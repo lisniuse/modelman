@@ -8,8 +8,10 @@ import getGlobal from '../util/getGlobal';
 class Base {
 
   constructor(options = {
+    $index: 0,
     extra: {},
     defaultValue: '',
+    placeholder: '',
     name: Base.fieldCount + 'field_name',
     displayName: Base.fieldCount + 'display_name',
     tableField: true,
