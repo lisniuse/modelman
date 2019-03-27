@@ -13,7 +13,7 @@ class Boolean extends Base {
   }
 
   check() {
-    return is.boolean(this.value);
+    return is.boolean(getGlobal().Boolean(this.value));
   }
   
   _default() {

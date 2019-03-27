@@ -28,7 +28,11 @@ m.assign({
 });
 
 //Set a value.
-m.setData({ title: '这是一篇文章！' });
+m.setData({ 
+  title: 'title',
+  topType: -1
+});
+
 // to json.
 let json = m.to.json();
 // to Mongoose's Model
@@ -39,6 +43,3 @@ console.log('\n=> Mongoose\'s Model : \n')
 console.log(mongooseModel);
 console.log('\n=> Will return a list of validation errors: \n')
 console.log(m.validator.all());
-
-
-console.log(m.fields);

@@ -13,7 +13,7 @@ class Number extends Base {
   }
 
   check() {
-    return is.number(this.value);
+    return is.number(getGlobal().Number(this.value));
   }
   
   _default() {

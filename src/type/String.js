@@ -17,10 +17,10 @@ class String extends Base {
       if ( this.value === '' ) {
         return false;
       } else {
-        return is.string(this.value);
+        return is.string(getGlobal().String(this.value));
       }
     } else {
-      return is.string(this.value);
+      return is.string(getGlobal().String(this.value));
     }
   }
   
