@@ -13,7 +13,9 @@ class Number extends Base {
   }
 
   check() {
-    return is.number(getGlobal().Number(this.value));
+    let number = getGlobal().Number(this.value);
+    let res = is.number(number);
+    return res;
   }
   
   _default() {
