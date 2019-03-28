@@ -44,13 +44,13 @@ class Base {
       if (is.not.valid(this.value)) {
         return false;
       } else {
-        this.check();
+        return this.check();
       }
     } else {
       if (is.not.valid(this.value)) {
         return true;
       } else {
-        this.check();
+        return this.check();
       }
     }
   }

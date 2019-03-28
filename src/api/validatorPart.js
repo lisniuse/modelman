@@ -4,7 +4,7 @@ function validatorPart() {
   let errorArr = [];
   this._iterator(field => {
     if ( is.valid(field.value) ) {
-      if (!field.check()) {
+      if (!field._check()) {
         let error = {
           name: field.name,
           displayName: field.displayName

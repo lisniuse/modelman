@@ -1,7 +1,7 @@
 function validatorAll() {
   let errorArr = [];
   this._iterator(field => {
-    if (!field.check()) {
+    if (field._check() === false) {
       let error = {
         name: field.name,
         displayName: field.displayName
