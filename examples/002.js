@@ -11,7 +11,8 @@ let m = new modelman.Model({
 m.assign({
   protocol: { n: '协议', type: 'String', f: true, t: true, r: true }, //协议
   host: { n: '域名', type: 'String', f: true, t: true, r: true }, //域名
-  port: { n: '端口', type: 'Number', f: true, t: true, r: true } //端口
+  port: { n: '端口', type: 'Number', f: true, t: true, r: true }, //端口
+  desc: { n: '描述', type: 'Number', f: true, t: true, r: true } //描述
 });
 
 //Set a value.

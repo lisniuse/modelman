@@ -39,6 +39,22 @@ class Base {
     return false;
   }
 
+  _check() {
+    if (this.required === true) {
+      if (is.not.valid(this.value)) {
+        return false;
+      } else {
+        this.check();
+      }
+    } else {
+      if (is.not.valid(this.value)) {
+        return true;
+      } else {
+        this.check();
+      }
+    }
+  }
+
   getValue() {
     return this.value;
   }
@@ -56,7 +72,7 @@ class Base {
 Base.fieldCount = 0;
 
 //Convert to mongo data type
-Base.toMongoType = function(Schema = {}) {
+Base.toMongoType = function (Schema = {}) {
   return getGlobal().String;
 }
 
