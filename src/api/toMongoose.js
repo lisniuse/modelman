@@ -2,6 +2,7 @@ import is from 'ispro';
 import types from '../type/index';
 
 function toMongoose(Types) {
+  let schema = {};
   this._iterator((field, key) => {
     if (field && field.name) {
       schema[key] = {};
