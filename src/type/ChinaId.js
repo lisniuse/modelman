@@ -22,7 +22,7 @@ class ChinaId extends Base {
 
 }
 
-ChinaId.toMongoType = function(Schema = {}) {
+ChinaId.toMongoType = function(Types = {}) {
   return getGlobal().String;
 }
 

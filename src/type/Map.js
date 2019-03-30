@@ -22,7 +22,7 @@ class Map extends Base {
 
 }
 
-Map.toMongoType = function(Schema = {}) {
+Map.toMongoType = function(Types = {}) {
   return getGlobal().Map;
 }
 

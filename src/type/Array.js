@@ -22,7 +22,7 @@ class Array extends Base {
 
 }
 
-Array.toMongoType = function(Schema = {}) {
+Array.toMongoType = function(Types = {}) {
   return getGlobal().Array;
 }
 

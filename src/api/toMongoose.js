@@ -1,12 +1,11 @@
 import is from 'ispro';
 import types from '../type/index';
 
-function toMongoose(Schema) {
-  let schema = {};
+function toMongoose(Types) {
   this._iterator((field, key) => {
     if (field && field.name) {
       schema[key] = {};
-      schema[key].type = field.constructor.toMongoType(Schema);
+      schema[key].type = field.constructor.toMongoType(Types);
       if (is.valid(field.ref)) {
         schema[key].ref = field.ref;
       }

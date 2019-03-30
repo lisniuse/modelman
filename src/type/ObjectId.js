@@ -21,8 +21,8 @@ class ObjectId extends Base {
 
 }
 
-ObjectId.toMongoType = function(Schema = {}) {
-  return Schema.ObjectId;
+ObjectId.toMongoType = function(Types = {}) {
+  return Types.ObjectId;
 }
 
 export default ObjectId;

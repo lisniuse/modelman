@@ -22,7 +22,7 @@ class Boolean extends Base {
 
 }
 
-Boolean.toMongoType = function(Schema = {}) {
+Boolean.toMongoType = function(Types = {}) {
   return getGlobal().Boolean;
 }
 

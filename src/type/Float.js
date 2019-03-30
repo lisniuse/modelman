@@ -21,8 +21,8 @@ class Float extends Base {
 
 }
 
-Float.toMongoType = function(Schema = {}) {
-  return Schema.Types.Decimal128;
+Float.toMongoType = function(Types = {}) {
+  return Types.Decimal128;
 }
 
 export default Float;
