@@ -12,6 +12,7 @@ function assign(fields) {
         }
       }
     }
+    this._initData = this._toJson();
   }
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "modelman",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "This is a generic model and validation library.",
   "license": "MIT",
   "homepage": "https://github.com/lisniuse/modelman",

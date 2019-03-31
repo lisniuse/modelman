@@ -9,12 +9,12 @@ let m = new modelman.Model({
 
 //Define the fields of the model.
 m.assign({
-  serialNumber: { n: '文章序号', type: 'Number', f: false, t: true }, //文章序号
-  categoryId: { n: '所属分类对象', type: 'ObjectId', f: false, t: true, ref: 'Category' }, //所属分类对象
-  userId: { n: '所属用户id', type: 'ObjectId', f: false, t: true, ref: 'User' }, //所属用户id
+  numberId: { n: '文章序号', type: 'Number', f: false, t: true }, //文章序号
+  title: { n: '文章标题', type: 'String', f: true, t: true, r: true }, //文章标题
+  categoryId: { n: '所属分类', type: 'ObjectId', f: false, t: true, ref: 'Category', extra: {displayField: 'name'}}, //所属分类对象
+  userId: { n: '发布用户', type: 'ObjectId', f: false, t: true, ref: 'User', extra: {displayField: 'nickname'}}, //发布用户
   type: { n: '文章类型', type: 'Number', f: true, r: true, extra: {options: '1:单封面文章,2:多封面文章'}}, //文章类型：1.单封面文章 2.多封面文章
-  title: { n: '文章标题', type: 'String', f: true, r: true }, //文章标题
-  keywords: { n: '文章关键字', type: 'String', f: true, r: true }, //文章关键字
+  keywords: { n: '文章关键字', type: 'Array', f: true, r: true, d: [] }, //文章关键字
   description: { n: '文章摘要', type: 'String', f: true, r: true, min: 10, max: 200 }, //文章摘要
   poster: { n: '文章封面', type: 'Url', f: true, r: true }, //文章封面
   mdContent: { n: '文章markdown内容', type: 'String', f: true, r: true }, //文章markdown内容

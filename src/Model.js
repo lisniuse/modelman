@@ -2,6 +2,7 @@ import mixin from './util/mixin';
 
 import apiAssign from './api/assign';
 import apiSetData from './api/setData';
+import apiReset from './api/reset';
 import apiToJson from './api/toJson';
 import apiToMongoose from './api/toMongoose';
 import apiValidatorAll from './api/validatorAll';
@@ -27,6 +28,7 @@ class Model {
 
 mixin(Model, "public", "assign", apiAssign)
   ("public", "setData", apiSetData)
+  ("private", "reset", apiReset)
   ("private", "_toJson", apiToJson)
   ("private", "_toMongoose", apiToMongoose)
   ("private", "_validatorAll", apiValidatorAll)
