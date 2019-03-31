@@ -1,7 +1,11 @@
-function reset() {
+function reset(condition) {
   this._iterator(field => {
     let value = this._initData[field.name];
-    field.value = value;
+    if (this._match(condition, field)) {
+      if (value !== undefined) {
+        field.value = value;
+      }
+    }
   });
   return this;
 }

@@ -1,7 +1,9 @@
-function toJson() {
+function toJson(condition) {
   let json = {};
   this._iterator(field => {
-    json[field.name] = field.value;
+    if (this._match(condition, field)) {
+      json[field.name] = field.value;
+    }
   });
   return json;
 }

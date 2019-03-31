@@ -11,6 +11,7 @@ import corePickle from './core/pickle';
 import coreMount from './core/mount';
 import coreGetConstructor from './core/getConstructor';
 import coreIterator from './core/iterator';
+import coreMatch from './core/match';
 
 /**
  * Model
@@ -28,7 +29,7 @@ class Model {
 
 mixin(Model, "public", "assign", apiAssign)
   ("public", "setData", apiSetData)
-  ("private", "reset", apiReset)
+  ("public", "reset", apiReset)
   ("private", "_toJson", apiToJson)
   ("private", "_toMongoose", apiToMongoose)
   ("private", "_validatorAll", apiValidatorAll)
@@ -37,6 +38,7 @@ mixin(Model, "public", "assign", apiAssign)
   ("private", "_getConstructor", coreGetConstructor)
   ("private", "_iterator", coreIterator)
   ("private", "_mount", coreMount)
+  ("private", "_match", coreMatch)
 ;
 
 export default Model;

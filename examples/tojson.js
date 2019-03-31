@@ -22,10 +22,11 @@ m.setData({
   protocol: 'http',
   host: 'www.jscms.top',
   port: '8080',
+  desc: '描述',
   createTime: 1234567890,
   updateTime: 1234567890
 });
 
 console.log(m.to.json());
-m.reset({formField: true});
-console.log(m.to.json({formField: true}));
+//m.reset({formField: true});
+//console.log(m.to.json({formField: true}));
