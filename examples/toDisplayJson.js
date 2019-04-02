@@ -30,16 +30,23 @@ m.assign({
 //Set a value.
 m.setData({ 
   title: 'title',
-  topType: -1
+  categoryId: {
+    alias: "default",
+    articleCount: 1,
+    createTime: 1546300800000,
+    description: "默认分类",
+    keywords: "默认分类",
+    name: "默认分类",
+    order: 0,
+    title: "默认分类",
+    updateTime: 1546300800000,
+    __v: 0,
+    _id: "5c9791a22ef9cff7d524a126",
+  }
 });
 
 // to json.
 let json = m.to.json();
-// to Mongoose's Model
-let mongooseModel = m.to.mongoose(mongoose.Types);
-console.log('\n=> json : \n')
-console.log(JSON.stringify(json, null, 2));
-console.log('\n=> Mongoose\'s Model : \n')
-console.log(mongooseModel);
-console.log('\n=> Will return a list of validation errors: \n')
-console.log(m.validator.all());
+let displayJson = m.to.displayJson();
+console.log(json);
+console.log(displayJson);
