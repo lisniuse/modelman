@@ -1,5 +1,6 @@
 const modelman = require('../dist/umd/modelman');
 const mongoose = require('mongoose');
+const is = require('ispro');
 
 //Create a new model
 let m = new modelman.Model({
@@ -17,7 +18,7 @@ m.assign({
   topType: { n: '置顶方式', type: 'Number', f: true, r: true, d: 0, extra: {comType: 'select', options: '0:无置顶,1:主要置顶,2:次要置顶'}}, //置顶方式 0、无置顶 1、主要置顶 2、次要置顶
   keywords: { n: '文章关键字', type: 'Array', f: true, r: true, d: [], extra: {comType: 'tagInput'}}, //文章关键字
   description: { n: '文章摘要', type: 'String', f: true, r: true, p: '文章的摘要，用于元信息或页面头部渲染。', min: 10, max: 200, extra: {comType: 'textarea'}}, //文章摘要
-  poster: { n: '文章封面', type: 'String', f: true, r: true, p: '图片的网址。' }, //文章封面
+  poster: { n: '文章封面', type: 'Url', f: true, r: true, p: '图片的网址。' }, //文章封面
   mdContent: { n: 'markdown', type: 'String', f: true, t: false, r: true, extra: {comType: 'markdown'}}, //文章markdown内容
   htContent: { n: 'html', type: 'String', f: false, t: false, r: false }, //文章html内容
   likeCount: { n: '点赞数量', type: 'Number', f: false, d: 0 }, //点赞数量
@@ -30,7 +31,8 @@ m.assign({
 //Set a value.
 m.setData({ 
   title: 'title',
-  topType: -1
+  topType: -1,
+  poster: 'http://127.0.0.1:7011/theme-static/default/static/images/poster-default.jpg'
 });
 
 // to json.
