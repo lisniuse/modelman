@@ -9,17 +9,19 @@ let m = new modelman.Model({
 
 //Define the fields of the model.
 m.assign({
-  protocol: { n: '协议', type: 'String', f: true, t: true, r: true }, //协议
-  host: { n: '域名', type: 'String', f: true, t: true, r: true }, //域名
-  port: { n: '端口', type: 'Number', f: true, t: true, r: true }, //端口
-  desc: { n: '描述', type: 'String', f: true, t: true, r: false } //描述
+  protocol: { n: '协议', type: 'String', f: true, t: true, r: true }, // 协议
+  host: { n: '域名', type: 'String', f: true, t: true, r: true }, // 域名
+  port: { n: '端口', type: 'Number', f: true, t: true, r: true }, // 端口
+  desc: { n: '描述', type: 'String', f: true, t: true, r: false }, // 描述
+  remark: { n: '备注', type: 'Any' }, // 任意类型
 });
 
 //Set a value.
 m.setData({ 
   protocol: 'http',
   host: 'www.jscms.top',
-  port: '8080'
+  port: '8080',
+  remark: ''
 });
 
 console.log(m.validator.all());

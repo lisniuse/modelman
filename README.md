@@ -37,6 +37,7 @@ Modelman兼容大部分的 [mongoose 的数据类型](https://mongoosejs.com/doc
 
 类型名称 | 描述
 ---|---
+Any | 任意数据类型
 Array | 普通数组对象
 Boolean | 布尔值
 Buffer | Buffer对象

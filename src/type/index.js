@@ -1,3 +1,4 @@
+import Any from './Any';
 import Array from './Array';
 import Base from './Base';
 import Boolean from './Boolean';
@@ -18,6 +19,7 @@ import Url from './Url';
 import Username from './Username';
 
 export default {
+  Any,
   Array,
   Base,
   Boolean,
