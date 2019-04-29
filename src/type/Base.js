@@ -29,6 +29,7 @@ class Base {
         }
       }
       this.value = is.valid(options.defaultValue) ? options.defaultValue : this._default();
+      this.displayValue = typeof this.value === 'object' ? JSON.parse(JSON.stringify(this.value)) : this.value;
       Base.fieldCount++;
     }
   }

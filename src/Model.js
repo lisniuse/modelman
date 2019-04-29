@@ -4,6 +4,7 @@ import apiAssign from './api/assign';
 import apiSetData from './api/setData';
 import apiReset from './api/reset';
 import apiToJson from './api/toJson';
+import apiToDisplayJson from './api/toDisplayJson';
 import apiToMongoose from './api/toMongoose';
 import apiValidatorAll from './api/validatorAll';
 import apiValidatorPart from './api/validatorPart';
@@ -31,6 +32,7 @@ mixin(Model, "public", "assign", apiAssign)
   ("public", "setData", apiSetData)
   ("public", "reset", apiReset)
   ("private", "_toJson", apiToJson)
+  ("private", "_toDisplayJson", apiToDisplayJson)
   ("private", "_toMongoose", apiToMongoose)
   ("private", "_validatorAll", apiValidatorAll)
   ("private", "_validatorPart", apiValidatorPart)

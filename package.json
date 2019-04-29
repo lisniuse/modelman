@@ -1,6 +1,6 @@
 {
   "name": "modelman",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "This is a generic model and validation library.",
   "license": "MIT",
   "homepage": "https://github.com/lisniuse/modelman",
@@ -34,7 +34,7 @@
     "build": "rollup -c"
   },
   "dependencies": {
-    "ispro": "^0.1.3"
+    "ispro": "^0.1.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
