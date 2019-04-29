@@ -29,7 +29,7 @@ m.assign({
 });
 
 //Set a value.
-m.setData({ 
+m.setData({
   title: 'title',
   topType: -1,
   poster: 'http://127.0.0.1:7011/theme-static/default/static/images/poster-default.jpg'
@@ -38,7 +38,7 @@ m.setData({
 // to json.
 let json = m.to.json();
 // to Mongoose's Model
-let mongooseModel = m.to.mongoose(mongoose.Types);
+let mongooseModel = m.to.mongoose(mongoose.Schema.Types);
 console.log('\n=> json : \n')
 console.log(JSON.stringify(json, null, 2));
 console.log('\n=> Mongoose\'s Model : \n')

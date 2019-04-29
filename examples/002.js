@@ -23,5 +23,7 @@ m.setData({
   port: '8080',
   remark: ''
 });
-
 console.log(m.validator.all());
+
+let mongooseModel = m.to.mongoose(mongoose.Schema.Types);
+console.log(mongooseModel);
