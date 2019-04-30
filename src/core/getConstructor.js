@@ -8,7 +8,7 @@ function getConstructor(type) {
   } else if (is.function(type)) {
     TypeConstructor = types.same(t => t === type) ? type : types.String;
   } else {
-    TypeConstructor = types.String;
+    TypeConstructor = types.Any;
   }
   return TypeConstructor;
 }
