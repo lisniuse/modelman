@@ -4,6 +4,10 @@ function match(queryObject, object, isExact = true) {
   let matchCount = 0;
   if (is.not.valid(queryObject)) {
     return true;
+  } else if (typeof queryObject === 'object') {
+    if ( Object.keys(queryObject).length === 0 ) {
+      return true;
+    }
   }
   for (const key in queryObject) {
     if (queryObject.hasOwnProperty(key)) {

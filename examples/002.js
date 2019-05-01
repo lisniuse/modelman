@@ -13,6 +13,7 @@ m.assign({
   host: { n: '域名', type: 'String', f: true, t: true, r: true }, // 域名
   port: { n: '端口', type: 'Number', f: true, t: true, r: true }, // 端口
   desc: { n: '描述', type: 'String', f: true, t: true, r: false }, // 描述
+  isStart: { n: '描述', type: 'Boolean', f: true, t: true, r: true },
   remark: { n: '备注', type: 'Any' }, // 任意类型
 });
 
@@ -21,7 +22,8 @@ m.setData({
   protocol: 'http',
   host: 'www.jscms.top',
   port: '8080',
-  remark: ''
+  remark: '',
+  isStart: ''
 });
 console.log(m.validator.all());
 

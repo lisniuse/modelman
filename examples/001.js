@@ -36,7 +36,7 @@ m.setData({
 });
 
 // to json.
-let json = m.to.json();
+let json = m.to.json({});
 // to Mongoose's Model
 let mongooseModel = m.to.mongoose(mongoose.Schema.Types);
 console.log('\n=> json : \n')
