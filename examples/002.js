@@ -21,9 +21,9 @@ m.assign({
 m.setData({ 
   protocol: 'http',
   host: 'www.jscms.top',
-  port: '8080',
+  port: 0,
   remark: '',
-  isStart: ''
+  isStart: false
 });
 console.log(m.validator.all());
 
